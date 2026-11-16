@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Coffee Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #3e2723;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #d7a86e;
+        }
+
+        /* Gallery Heading */
+        .gallery-heading {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .gallery-heading h1 {
+            color: #3e2723;
+            font-size: 36px;
+        }
+
+        .gallery-heading p {
+            color: #765548;
+            font-size: 17px;
+        }
+
+        /* Gallery Grid */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Gallery Cards */
+        .gallery-item {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item p {
+            color: #3e2723;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 500px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+
+    <!-- Gallery Introduction -->
+    <div class="gallery-heading">
+
+        <h1>Our Coffee Gallery ☕</h1>
+
+        <p>
+            Discover our delicious coffees, fresh desserts
+            and favourite cafe treats.
+        </p>
+
+    </div>
+
+
+    <!-- Gallery Images -->
+    <div class="gallery-container">
+
+        <div class="gallery-item">
+            <img src="images/coffee2.png" alt="Classic Espresso">
+            <p>Classic Espresso</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/coffe3.png" alt="Cappuccino with Latte Art">
+            <p>Cappuccino</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/cofee4.png" alt="Iced Caramel Coffee">
+            <p>Iced Caramel Coffee</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/cak1.png" alt="Chocolate Brownies">
+            <p>Chocolate Brownies</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/cake2.png" alt="Fresh Croissants">
+            <p>Fresh Croissants</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/cake3.png" alt="Classic Cheesecake">
+            <p>Classic Cheesecake</p>
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2026 Coffee Shop. All Rights Reserved.</p>
+
+        <p>Fresh Coffee | Delicious Desserts | Good Vibes</p>
+
+    </footer>
+
+</body>
+</html>
