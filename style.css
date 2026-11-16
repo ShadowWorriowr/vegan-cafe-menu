@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    background-image: ;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+}
+
+button {
+    color: black;
+    border-radius: 8px;
+}
