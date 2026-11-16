@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Vegan Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="site-nav">
+        <div class="logo">☕ Vegan Cafe</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- MENU INTRODUCTION -->
+    <div class="gallery-heading">
+        <h1>Our Menu ☕</h1>
+
+        <p>
+            Discover our delicious coffees, refreshing drinks
+            and freshly prepared cafe treats.
+        </p>
+    </div>
+
+    <!-- COFFEE SECTION -->
+    <h2 class="menu-section-title">☕ Coffee & Beverages</h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <img src="images/coffee2.png" alt="Espresso">
+
+            <div class="menu-info">
+                <h3>Classic Espresso</h3>
+                <p>Rich and bold coffee with a strong aroma.</p>
+                <h4>$5.00</h4>
+
+                <button type="button"
+                    onclick="buyNow('Classic Espresso', '$5.00')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/coffe3.png" alt="Cappuccino">
+
+            <div class="menu-info">
+                <h3>Cappuccino</h3>
+                <p>Espresso combined with steamed milk and foam.</p>
+                <h4>$6.20</h4>
+
+                <button type="button"
+                    onclick="buyNow('Cappuccino', '$6.20')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/cofee4.png" alt="Iced Caramel Coffee">
+
+            <div class="menu-info">
+                <h3>Iced Caramel Coffee</h3>
+                <p>Refreshing iced coffee with delicious caramel.</p>
+                <h4>$6.50</h4>
+
+                <button type="button"
+                    onclick="buyNow('Iced Caramel Coffee', '$6.50')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/latte.png" alt="Americano">
+
+            <div class="menu-info">
+                <h3>Americano</h3>
+                <p>Espresso mixed with hot water for a smooth taste.</p>
+                <h4>$6.00</h4>
+
+                <button type="button"
+                    onclick="buyNow('Americano', '$6.00')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/americano.png" alt="Latte">
+
+            <div class="menu-info">
+                <h3>Latte</h3>
+                <p>Smooth espresso blended with steamed milk.</p>
+                <h4>$6.20</h4>
+
+                <button type="button"
+                    onclick="buyNow('Latte', '$6.20')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/flat.png" alt="Flat White">
+
+            <div class="menu-info">
+                <h3>Flat White</h3>
+                <p>Velvety milk combined with a rich espresso shot.</p>
+                <h4>$6.50</h4>
+
+                <button type="button"
+                    onclick="buyNow('Flat White', '$6.50')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- DESSERT SECTION -->
+    <h2 class="menu-section-title">🍰 Desserts & Bakery</h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <img src="images/cak1.png" alt="Chocolate Brownies">
+
+            <div class="menu-info">
+                <h3>Chocolate Brownies</h3>
+                <p>Rich chocolate brownies with a soft, fudgy centre.</p>
+                <h4>$4.50</h4>
+
+                <button type="button"
+                    onclick="buyNow('Chocolate Brownies', '$4.50')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/cake2.png" alt="Fresh Croissants">
+
+            <div class="menu-info">
+                <h3>Fresh Croissants</h3>
+                <p>Freshly baked, buttery and flaky croissants.</p>
+                <h4>$3.50</h4>
+
+                <button type="button"
+                    onclick="buyNow('Fresh Croissants', '$3.50')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/cake3.png" alt="Classic Cheesecake">
+
+            <div class="menu-info">
+                <h3>Classic Cheesecake</h3>
+                <p>Creamy cheesecake with a delicious biscuit base.</p>
+                <h4>$5.00</h4>
+
+                <button type="button"
+                    onclick="buyNow('Classic Cheesecake', '$5.00')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BUY NOW POPUP -->
+    <div class="popup" id="buyPopup">
+
+        <div class="popup-content">
+
+            <h2>Confirm Your Order ☕</h2>
+
+            <p>You have selected:</p>
+
+            <h3 id="productName"></h3>
+
+            <h3 id="productPrice"></h3>
+
+            <p>Would you like to confirm your order?</p>
+
+            <button type="button" class="confirm-btn"
+                onclick="confirmOrder()">
+                Confirm Order
+            </button>
+
+            <button type="button" class="cancel-btn"
+                onclick="closePopup()">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Vegan Cafe. All Rights Reserved.</p>
+        <p>Fresh Coffee | Delicious Drinks | Good Vibes</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        let selectedProduct = "";
+        let selectedPrice = "";
+
+        function buyNow(product, price) {
+
+            selectedProduct = product;
+            selectedPrice = price;
+
+            document.getElementById("productName").textContent = product;
+            document.getElementById("productPrice").textContent = price;
+
+            document.getElementById("buyPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+
+            document.getElementById("buyPopup").style.display = "none";
+        }
+
+        function confirmOrder() {
+
+            alert(
+                "Thank you for ordering " + selectedProduct +
+                "!\nTotal Price: " + selectedPrice
+            );
+
+            closePopup();
+        }
+
+    </script>
+
+</body>
+</html>
